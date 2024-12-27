@@ -108,9 +108,9 @@ void Chaining::addTransaction(std::string id, int count) {
                         break;
                     }
                 }
-            if(mid == n-1){
-                balances[n-1] = comp;
-            }  
+                if(mid == n-1){
+                    balances[n-1] = comp;
+                }  
             }
             return;
         }
