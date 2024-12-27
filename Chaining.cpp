@@ -99,14 +99,14 @@ void Chaining::addTransaction(std::string id, int count) {
             else if(count>0){
                 int n = balances.size();
                 while(mid < n-1){
-                if(balances[mid + 1] < comp){
-                    balances[mid] = balances[mid + 1];
-                    mid++;
-                }
-                else if(balances[mid+1] >= comp){
-                    balances[mid] = comp;
-                    break;
-                }
+                    if(balances[mid + 1] < comp){
+                        balances[mid] = balances[mid + 1];
+                        mid++;
+                    }
+                    else if(balances[mid+1] >= comp){
+                        balances[mid] = comp;
+                        break;
+                    }
                 }
             if(mid == n-1){
                 balances[n-1] = comp;
